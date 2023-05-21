@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    tools:context=".SegundaTela">
+
+    <RelativeLayout
+        android:layout_width="364dp"
+        android:layout_height="670dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Selecione seus itens aqui!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="45px"
+            android:textStyle="bold|italic" />
+
+        <RadioGroup
+            android:id="@+id/dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView4"
+            android:layout_alignLeft="@id/textView4"
+            android:layout_marginRight="30px">
+
+            <CheckBox
+                android:id="@+id/ch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banana"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maça"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pão"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Água"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vinho"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/esq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView4"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/dir">
+
+            <CheckBox
+                android:id="@+id/ch6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tomate"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alface"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pepino"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Macarrão"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/ch10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Açucar"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/esq"
+            android:layout_alignRight="@id/esq"
+            android:layout_marginTop="50px"
+            android:onClick="priTela"
+            android:text="Voltar"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result"
+            android:layout_marginTop="30px"
+            app:srcCompat="@drawable/agostinhoca" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/esq"
+            android:layout_alignRight="@id/dir"
+            android:layout_marginTop="50px"
+            android:onClick="pinPreco"
+            android:text="Calcular" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button2"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="45px"
+            android:textStyle="bold|italic" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
